@@ -33,7 +33,7 @@ ${URL}        https://www.google.fr/
   sleep   1
    Input Text     id=tw-source-text-ta  Hi again it is me i will go to my linkedin
   sleep   1
-  Open Browser      https://www.linkedin.com/in/zianiabdessamad/  ${Browser}
+  Open Browser      https://www.linkedin.com/in/zianiabdessamad/  ${Browser} 
   Close Browser  
 
 
