@@ -77,9 +77,8 @@ Create new order
     Click Button    Open order
     Set Selenium Timeout         3s 
 See all orders
-    Set Selenium Timeout         3s 
     Page Should Contain Element    Xpath=//*[@id="header"]/nav/div/ul/li[1]
-    Set Selenium Timeout         3s 
+    Set Selenium Timeout         5s 
     Click Link    Main
     Set Selenium Timeout         3s 
 
@@ -97,6 +96,10 @@ Close order
 See customers and create new one
     Click Link      Customers
     Set Selenium Timeout         2s 
+    Click Link   162/
+    Set Selenium Timeout         2s 
+    Click Link      Customers
+    Set Selenium Timeout         2s 
     Click Button    Add
     Input Text    id=card        658586
     Set Selenium Timeout         3s 
@@ -107,9 +110,8 @@ See customers and create new one
     Input Text    id=phoneid    +212655428974
     Set Selenium Timeout         3s 
     Input Text    id=mail2    johndeo@gmail.com
-    # Set Selenium Timeout         5s 
-    # Wait Until Element Is Enabled    Save
-    Set Selenium Timeout         10s 
+    Sleep    10
+    Set Selenium Timeout         5s 
     Click Button       Save
     Set Selenium Timeout         3s 
     Page Should Contain   Customer successfully added!
