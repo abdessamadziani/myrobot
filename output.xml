@@ -1,205 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-04-22T12:17:24.803367" rpa="false" schemaversion="5">
-<suite id="s1" name="Hello" source="C:\Users\aziani\Desktop\abc\Hello.robot">
-<test id="s1-t1" name=" 1-Open Google Search Page and Search" line="13">
-<kw name="Open Google Search Page">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-22T12:17:24.907074" level="INFO">Opening browser 'Edge' to base url 'https://www.google.fr/'.</msg>
-<msg time="2024-04-22T12:17:44.966923" level="WARN">Exception managing MicrosoftEdge: error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_124_WINDOWS): error trying to connect: Une connexion existante a dû être fermée par l’hôte distant. (os error 10054)</msg>
-<msg time="2024-04-22T12:17:44.966923" level="WARN">The msedgedriver version (123.0.2420.97) detected in PATH at C:\Users\aziani\Desktop\abc\msedgedriver.exe might not be compatible with the detected MicrosoftEdge version (124.0.2478.51); currently, msedgedriver  is recommended for MicrosoftEdge 124.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg time="2024-04-22T12:17:44.966923" level="WARN">Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event): operation timed out</msg>
-<arg>${url}</arg>
-<arg>${Browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-22T12:17:24.907074" elapsed="27.886952"/>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-04-24T12:42:08.737885" rpa="false" schemaversion="5">
+<suite id="s1" name="Hello" source="c:\Users\aziani\Desktop\abc\Tests\Hello.robot">
+<test id="s1-t1" name=" 6-try See customers and create new one" line="36">
+<kw name="See customers and create new one">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-04-24T12:42:08.843872" level="INFO">Clicking link 'Customers'.</msg>
+<msg time="2024-04-24T12:42:08.844868" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2024-04-24T12:42:08.845864" level="FAIL">No browser is open.</msg>
+<arg>Customers</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="FAIL" start="2024-04-24T12:42:08.843872" elapsed="0.004018">No browser is open.</status>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-22T12:17:54.794366" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-22T12:17:52.794026" elapsed="2.000340"/>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>2s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" start="2024-04-24T12:42:08.847890" elapsed="0.000990"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-04-22T12:17:54.794366" level="INFO">Clicking button 'id=W0wltc'.</msg>
-<arg>id=W0wltc</arg>
+<arg>Add</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-22T12:17:54.794366" elapsed="0.047453"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-22T12:17:56.842240" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-22T12:17:54.841819" elapsed="2.000421"/>
+<status status="NOT RUN" start="2024-04-24T12:42:08.848880" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-22T12:17:56.842240" level="INFO">Typing text 'Robot' into text field 'name=q'.</msg>
-<arg>name=q</arg>
-<arg>Robot</arg>
+<arg>id=card</arg>
+<arg>658586</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-22T12:17:56.842240" elapsed="0.063759"/>
+<status status="NOT RUN" start="2024-04-24T12:42:08.848880" elapsed="0.000000"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-22T12:17:58.906287" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-22T12:17:56.905999" elapsed="2.000288"/>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>3s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" start="2024-04-24T12:42:08.849877" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-04-22T12:17:24.907074" elapsed="33.999213"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>Xpath=//*[@id="horizontal"]/form/div[2]/div/input</arg>
+<arg>john</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-04-24T12:42:08.849877" elapsed="0.000000"/>
 </kw>
-<kw name="Search Google">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-04-22T12:17:58.906287" level="INFO">Clicking button 'name=btnK'.</msg>
-<arg>name=btnK</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-22T12:17:58.906287" elapsed="0.231848"/>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>3s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" start="2024-04-24T12:42:08.849877" elapsed="0.000000"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-22T12:18:01.138258" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-22T12:17:59.138135" elapsed="2.000123"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name=family</arg>
+<arg>johndeo</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-04-24T12:42:08.849877" elapsed="0.000000"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-22T12:18:01.139263" elapsed="2.140061"/>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>3s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" start="2024-04-24T12:42:08.849877" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-04-22T12:17:58.906287" elapsed="4.373037"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=phoneid</arg>
+<arg>+212655428974</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-04-24T12:42:08.849877" elapsed="0.000000"/>
 </kw>
-<doc>Open the Google search page and search for "Robot"</doc>
-<status status="PASS" start="2024-04-22T12:17:24.907074" elapsed="38.372250"/>
-</test>
-<test id="s1-t2" name=" 2-second test" line="19">
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-22T12:18:05.290981" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-22T12:18:03.285837" elapsed="2.005144"/>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>3s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" start="2024-04-24T12:42:08.849877" elapsed="0.000000"/>
 </kw>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-22T12:18:05.290981" level="INFO">Opening browser 'Edge' to base url 'https://dev.to/leading-edje/running-your-first-robot-test-31ob'.</msg>
-<msg time="2024-04-22T12:18:25.209234" level="WARN">Exception managing MicrosoftEdge: error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_124_WINDOWS): error trying to connect: Une connexion existante a dû être fermée par l’hôte distant. (os error 10054)</msg>
-<msg time="2024-04-22T12:18:25.209234" level="WARN">The msedgedriver version (123.0.2420.97) detected in PATH at C:\Users\aziani\Desktop\abc\msedgedriver.exe might not be compatible with the detected MicrosoftEdge version (124.0.2478.51); currently, msedgedriver  is recommended for MicrosoftEdge 124.*, so it is advised to delete the driver in PATH and retry</msg>
-<arg>https://dev.to/leading-edje/running-your-first-robot-test-31ob</arg>
-<arg>${Browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-22T12:18:05.290981" elapsed="33.109119"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=mail2</arg>
+<arg>johndeo@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-04-24T12:42:08.849877" elapsed="0.000000"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-22T12:18:40.401342" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-22T12:18:38.401096" elapsed="2.000246"/>
-</kw>
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-04-22T12:18:40.404325" level="INFO">Executing JavaScript:
-window.scrollTo(0, document.body.scrollHeight)
-Without any arguments.</msg>
-<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-04-22T12:18:40.403330" elapsed="0.021665"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-22T12:18:42.426767" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-22T12:18:40.425992" elapsed="2.000775"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-22T12:18:42.429099" elapsed="2.175481"/>
-</kw>
-<status status="PASS" start="2024-04-22T12:18:03.285837" elapsed="41.320618"/>
-</test>
-<test id="s1-t3" name="3- third test" line="27">
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-22T12:18:46.612010" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-22T12:18:44.611259" elapsed="2.000751"/>
-</kw>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-22T12:18:46.612010" level="INFO">Opening browser 'Edge' to base url 'https://www.google.com/search?q=google+traduction&amp;rlz=1C1GCEA_enFR1106FR1106&amp;oq=goo&amp;gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIGCAEQRRhAMgYIAhBFGDkyEwgDEC4YgwEYxwEYsQMY0QMYgAQyDQgEEAAYgwEYsQMYgAQyBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQgxNzE4ajBqN6gCALACAA&amp;sourceid=chrome&amp;ie=UTF-8'.</msg>
-<msg time="2024-04-22T12:19:06.485357" level="WARN">Exception managing MicrosoftEdge: error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_124_WINDOWS): error trying to connect: Une connexion existante a dû être fermée par l’hôte distant. (os error 10054)</msg>
-<msg time="2024-04-22T12:19:06.485357" level="WARN">The msedgedriver version (123.0.2420.97) detected in PATH at C:\Users\aziani\Desktop\abc\msedgedriver.exe might not be compatible with the detected MicrosoftEdge version (124.0.2478.51); currently, msedgedriver  is recommended for MicrosoftEdge 124.*, so it is advised to delete the driver in PATH and retry</msg>
-<arg>https://www.google.com/search?q=google+traduction&amp;rlz=1C1GCEA_enFR1106FR1106&amp;oq=goo&amp;gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIGCAEQRRhAMgYIAhBFGDkyEwgDEC4YgwEYxwEYsQMY0QMYgAQyDQgEEAAYgwEYsQMYgAQyBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQgxNzE4ajBqN6gCALACAA&amp;sourceid=chrome&amp;ie=UTF-8</arg>
-<arg>${Browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-22T12:18:46.612010" elapsed="22.206811"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-22T12:19:09.819417" level="INFO">Slept 1 second.</msg>
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-22T12:19:08.818821" elapsed="1.000596"/>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>3s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" start="2024-04-24T12:42:08.849877" elapsed="0.001000"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-04-22T12:19:09.819417" level="INFO">Clicking button 'id=W0wltc'.</msg>
-<arg>id=W0wltc</arg>
+<arg>Save</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-22T12:19:09.819417" elapsed="0.081093"/>
+<status status="NOT RUN" start="2024-04-24T12:42:08.850877" elapsed="0.000000"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-22T12:19:09.900510" level="INFO">Typing text 'Hello' into text field 'id=tw-source-text-ta'.</msg>
-<arg>id=tw-source-text-ta</arg>
-<arg>Hello</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-22T12:19:09.900510" elapsed="0.108149"/>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>3s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" start="2024-04-24T12:42:08.850877" elapsed="0.000000"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-22T12:19:11.010349" level="INFO">Slept 1 second.</msg>
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-22T12:19:10.009655" elapsed="1.000694"/>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Customer successfully added!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2024-04-24T12:42:08.850877" elapsed="0.000000"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-22T12:19:11.010349" level="INFO">Typing text 'Hi again it is me i will go to my linkedin' into text field 'id=tw-source-text-ta'.</msg>
-<arg>id=tw-source-text-ta</arg>
-<arg>Hi again it is me i will go to my linkedin</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-22T12:19:11.010349" elapsed="0.117501"/>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>3s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" start="2024-04-24T12:42:08.850877" elapsed="0.000000"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-22T12:19:12.129431" level="INFO">Slept 1 second.</msg>
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-22T12:19:11.128849" elapsed="1.000582"/>
+<status status="FAIL" start="2024-04-24T12:42:08.843872" elapsed="0.007005">No browser is open.</status>
 </kw>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-22T12:19:12.129431" level="INFO">Opening browser 'Edge' to base url 'https://www.linkedin.com/in/zianiabdessamad/'.</msg>
-<msg time="2024-04-22T12:19:31.917114" level="WARN">Exception managing MicrosoftEdge: error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_124_WINDOWS): error trying to connect: Une connexion existante a dû être fermée par l’hôte distant. (os error 10054)</msg>
-<msg time="2024-04-22T12:19:31.917114" level="WARN">The msedgedriver version (123.0.2420.97) detected in PATH at C:\Users\aziani\Desktop\abc\msedgedriver.exe might not be compatible with the detected MicrosoftEdge version (124.0.2478.51); currently, msedgedriver  is recommended for MicrosoftEdge 124.*, so it is advised to delete the driver in PATH and retry</msg>
-<arg>https://www.linkedin.com/in/zianiabdessamad/</arg>
-<arg>${Browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-22T12:19:12.129431" elapsed="25.765127"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-22T12:19:37.894558" elapsed="2.113316"/>
-</kw>
-<status status="PASS" start="2024-04-22T12:18:44.610060" elapsed="55.397814"/>
+<doc>See customers and create new one</doc>
+<status status="FAIL" start="2024-04-24T12:42:08.842874" elapsed="0.008997">No browser is open.</status>
 </test>
-<status status="PASS" start="2024-04-22T12:17:24.803367" elapsed="135.204507"/>
+<status status="FAIL" start="2024-04-24T12:42:08.740873" elapsed="0.111994"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="Hello">Hello</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Hello">Hello</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-04-22T12:17:44.966923" level="WARN">Exception managing MicrosoftEdge: error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_124_WINDOWS): error trying to connect: Une connexion existante a dû être fermée par l’hôte distant. (os error 10054)</msg>
-<msg time="2024-04-22T12:17:44.966923" level="WARN">The msedgedriver version (123.0.2420.97) detected in PATH at C:\Users\aziani\Desktop\abc\msedgedriver.exe might not be compatible with the detected MicrosoftEdge version (124.0.2478.51); currently, msedgedriver  is recommended for MicrosoftEdge 124.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg time="2024-04-22T12:17:44.966923" level="WARN">Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event): operation timed out</msg>
-<msg time="2024-04-22T12:18:25.209234" level="WARN">Exception managing MicrosoftEdge: error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_124_WINDOWS): error trying to connect: Une connexion existante a dû être fermée par l’hôte distant. (os error 10054)</msg>
-<msg time="2024-04-22T12:18:25.209234" level="WARN">The msedgedriver version (123.0.2420.97) detected in PATH at C:\Users\aziani\Desktop\abc\msedgedriver.exe might not be compatible with the detected MicrosoftEdge version (124.0.2478.51); currently, msedgedriver  is recommended for MicrosoftEdge 124.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg time="2024-04-22T12:19:06.485357" level="WARN">Exception managing MicrosoftEdge: error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_124_WINDOWS): error trying to connect: Une connexion existante a dû être fermée par l’hôte distant. (os error 10054)</msg>
-<msg time="2024-04-22T12:19:06.485357" level="WARN">The msedgedriver version (123.0.2420.97) detected in PATH at C:\Users\aziani\Desktop\abc\msedgedriver.exe might not be compatible with the detected MicrosoftEdge version (124.0.2478.51); currently, msedgedriver  is recommended for MicrosoftEdge 124.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg time="2024-04-22T12:19:31.917114" level="WARN">Exception managing MicrosoftEdge: error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_124_WINDOWS): error trying to connect: Une connexion existante a dû être fermée par l’hôte distant. (os error 10054)</msg>
-<msg time="2024-04-22T12:19:31.917114" level="WARN">The msedgedriver version (123.0.2420.97) detected in PATH at C:\Users\aziani\Desktop\abc\msedgedriver.exe might not be compatible with the detected MicrosoftEdge version (124.0.2478.51); currently, msedgedriver  is recommended for MicrosoftEdge 124.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
