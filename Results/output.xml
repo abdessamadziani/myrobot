@@ -1,500 +1,461 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-04-24T15:08:46.463835" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-04-30T12:06:49.559743" rpa="false" schemaversion="5">
 <suite id="s1" name="Hello" source="C:\Users\aziani\Desktop\abc\Tests\Hello.robot">
-<test id="s1-t1" name=" 1-Open Signup Page to create a new account" line="14">
-<kw name="Open Signin Page">
+<test id="s1-t1" name=" 1-Open Sign in Page and login" line="24">
+<kw name="Open Signin Page" owner="signin">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:08:46.580366" level="INFO">Opening browser 'Chrome' to base url 'https://demo.playground-crm.com/'.</msg>
-<msg time="2024-04-24T15:13:47.001365" level="WARN">Exception managing chrome: error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): operation timed out</msg>
-<msg time="2024-04-24T15:13:47.001365" level="WARN">The chromedriver version (123.0.6312.122) detected in PATH at C:\Users\aziani\Desktop\abc\chromedriver.exe might not be compatible with the detected chrome version (124.0.6367.61); currently, chromedriver  is recommended for chrome 124.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-04-30T12:06:49.670687" level="INFO">Opening browser 'Chrome' to base url 'https://demo.playground-crm.com/'.</msg>
+<msg time="2024-04-30T12:07:09.393853" level="WARN">Exception managing chrome: error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: Une connexion existante a dû être fermée par l’hôte distant. (os error 10054)</msg>
+<msg time="2024-04-30T12:07:09.397856" level="WARN">The chromedriver version (123.0.6312.122) detected in PATH at C:\Users\aziani\Desktop\abc\chromedriver.exe might not be compatible with the detected chrome version (124.0.6367.63); currently, chromedriver  is recommended for chrome 124.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>${url}</arg>
 <arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-24T15:08:46.580366" elapsed="312.452233"/>
-</kw>
-<kw name="Set Selenium Speed" owner="SeleniumLibrary">
-<arg>2s</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2024-04-24T15:13:59.032599" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-30T12:06:49.670687" elapsed="32.513769"/>
 </kw>
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
-<arg>12s</arg>
+<arg>2s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-04-24T15:13:59.032599" elapsed="2.003041"/>
+<status status="PASS" start="2024-04-30T12:07:22.184456" elapsed="0.001999"/>
 </kw>
-<status status="PASS" start="2024-04-24T15:08:46.580366" elapsed="314.455274"/>
+<status status="PASS" start="2024-04-30T12:06:49.670687" elapsed="32.515768"/>
 </kw>
-<kw name="Add signin data and submit">
+<kw name="Add signin data and submit" owner="signin">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:14:01.035640" level="INFO">Typing text 'admin' into text field 'id=user'.</msg>
-<arg>id=user</arg>
-<arg>admin</arg>
+<msg time="2024-04-30T12:07:22.188457" level="INFO">Typing text 'admin' into text field 'id=user'.</msg>
+<arg>${INPUT_LOGIN}</arg>
+<arg>${INPUT_LOGIN_VALUE}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-24T15:14:01.035640" elapsed="6.143724"/>
+<status status="PASS" start="2024-04-30T12:07:22.187456" elapsed="0.061000"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>2s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2024-04-30T12:07:22.249457" elapsed="0.000000"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:14:07.179364" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg time="2024-04-24T15:14:11.226211" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>id=password</arg>
-<arg>admin</arg>
+<msg time="2024-04-30T12:07:22.249457" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2024-04-30T12:07:22.267958" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${INPUT_PASSWORD}</arg>
+<arg>${INPUT_PASSWORD_VALUE}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-24T15:14:07.179364" elapsed="6.123525"/>
+<status status="PASS" start="2024-04-30T12:07:22.249457" elapsed="0.040500"/>
 </kw>
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>2s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-04-24T15:14:13.302889" elapsed="2.006875"/>
-</kw>
-<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
-<arg>2s</arg>
-<doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-04-24T15:14:15.309764" elapsed="2.006381"/>
+<status status="PASS" start="2024-04-30T12:07:22.290958" elapsed="0.000000"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:14:17.316145" level="INFO">Clicking button 'Login!'.</msg>
-<arg>Login!</arg>
+<msg time="2024-04-30T12:07:22.291958" level="INFO">Clicking button 'Login!'.</msg>
+<arg>${BUTTON_LOGIN}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-24T15:14:17.316145" elapsed="9.610479"/>
+<status status="PASS" start="2024-04-30T12:07:22.290958" elapsed="5.811732"/>
 </kw>
-<status status="PASS" start="2024-04-24T15:14:01.035640" elapsed="25.891633"/>
+<status status="PASS" start="2024-04-30T12:07:22.187456" elapsed="5.915234"/>
 </kw>
-<doc>Open Signup Page to create a new account</doc>
-<status status="PASS" start="2024-04-24T15:08:46.574322" elapsed="340.355017"/>
+<doc>Open Signin Page and login</doc>
+<tag>1007</tag>
+<tag>Login</tag>
+<tag>Smoke</tag>
+<status status="PASS" start="2024-04-30T12:06:49.669688" elapsed="38.435005"/>
 </test>
-<test id="s1-t2" name=" 2-try to create new order" line="21">
-<kw name="Create new order">
+<test id="s1-t2" name=" 2-try to create new order" line="33">
+<kw name="Create new order" owner="homepage">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:14:26.935054" level="INFO">Clicking link 'id=neworder'.</msg>
+<msg time="2024-04-30T12:07:28.107693" level="INFO">Clicking link 'id=neworder'.</msg>
 <arg>id=neworder</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-24T15:14:26.935054" elapsed="6.992810"/>
+<status status="PASS" start="2024-04-30T12:07:28.107693" elapsed="0.306045"/>
 </kw>
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
-<arg>2s</arg>
+<arg>3s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-04-24T15:14:33.927864" elapsed="2.002978"/>
+<status status="PASS" start="2024-04-30T12:07:28.413738" elapsed="0.001001"/>
 </kw>
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:14:37.957827" level="INFO">Current page contains element 'Xpath=//*[@id="wrapper"]/section/div/article[1]/div/header/h2'.</msg>
+<msg time="2024-04-30T12:07:28.424739" level="INFO">Current page contains element 'Xpath=//*[@id="wrapper"]/section/div/article[1]/div/header/h2'.</msg>
 <arg>Xpath=//*[@id="wrapper"]/section/div/article[1]/div/header/h2</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2024-04-24T15:14:35.931893" elapsed="2.025934"/>
+<status status="PASS" start="2024-04-30T12:07:28.415738" elapsed="0.009001"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:14:37.958874" level="INFO">Typing text '66' into text field 'id=productID'.</msg>
+<msg time="2024-04-30T12:07:28.425742" level="INFO">Typing text '66' into text field 'id=productID'.</msg>
 <arg>id=productID</arg>
 <arg>66</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-24T15:14:37.958874" elapsed="6.148233"/>
+<status status="PASS" start="2024-04-30T12:07:28.425742" elapsed="0.044832"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>3s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2024-04-30T12:07:28.470574" elapsed="0.001000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:14:44.107107" level="INFO">Typing text '1' into text field 'id=inputPassword1'.</msg>
+<msg time="2024-04-30T12:07:28.471574" level="INFO">Typing text '1' into text field 'id=inputPassword1'.</msg>
 <arg>id=inputPassword1</arg>
 <arg>1</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-24T15:14:44.107107" elapsed="6.114819"/>
+<status status="PASS" start="2024-04-30T12:07:28.471574" elapsed="0.051000"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>3s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2024-04-30T12:07:28.522574" elapsed="0.001000"/>
 </kw>
 <kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:14:50.221926" level="INFO">Selecting options from selection list 'id=tp_select' by value 0.</msg>
+<msg time="2024-04-30T12:07:28.523574" level="INFO">Selecting options from selection list 'id=tp_select' by value 0.</msg>
 <arg>id=tp_select</arg>
 <arg>0</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-04-24T15:14:50.221926" elapsed="12.125098"/>
+<status status="PASS" start="2024-04-30T12:07:28.523574" elapsed="0.029000"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>3s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2024-04-30T12:07:28.552574" elapsed="0.001000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:15:02.347024" level="INFO">Typing text 'khaled +212653555548' into text field 'id=card_id_filed'.</msg>
+<msg time="2024-04-30T12:07:28.553574" level="INFO">Typing text 'khaled +212653555548' into text field 'id=card_id_filed'.</msg>
 <arg>id=card_id_filed</arg>
 <arg>khaled +212653555548</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-24T15:15:02.347024" elapsed="6.168404"/>
+<status status="PASS" start="2024-04-30T12:07:28.553574" elapsed="0.061707"/>
 </kw>
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
-<arg>2s</arg>
+<arg>3s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-04-24T15:15:08.515428" elapsed="2.005601"/>
+<status status="PASS" start="2024-04-30T12:07:28.615281" elapsed="0.000999"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id=neworderbtn</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-30T12:07:28.616280" elapsed="0.007000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<msg time="2024-04-30T12:07:28.793144" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-197.png"&gt;&lt;img src="selenium-screenshot-197.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-30T12:07:28.793144" level="FAIL">Element 'id=neworderbtn' is disabled.</msg>
+<arg>id=neworderbtn</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="FAIL" start="2024-04-30T12:07:28.624280" elapsed="0.169869">Element 'id=neworderbtn' is disabled.</status>
+</kw>
+<msg time="2024-04-30T12:07:28.794149" level="INFO">${button_enabled} = False</msg>
+<var>${button_enabled}</var>
+<arg>Element Should Be Enabled</arg>
+<arg>id=neworderbtn</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-04-30T12:07:28.624280" elapsed="0.169869"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>3s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2024-04-30T12:07:28.794149" elapsed="0.000995"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Enable Button" owner="homepage">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-04-30T12:07:28.795144" level="INFO">Executing JavaScript:
+document.getElementById('neworderbtn').removeAttribute('disabled');
+Without any arguments.</msg>
+<arg>document.getElementById('${locator}').removeAttribute('disabled');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-04-30T12:07:28.795144" elapsed="0.003196"/>
+</kw>
+<arg>${neworderbtn}</arg>
+<status status="PASS" start="2024-04-30T12:07:28.795144" elapsed="0.003196"/>
+</kw>
+<arg>not ${button_enabled}</arg>
+<arg>Enable Button</arg>
+<arg>${neworderbtn}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-30T12:07:28.795144" elapsed="0.004152"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>3s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2024-04-30T12:07:28.799296" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>3s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2024-04-30T12:07:28.799296" elapsed="0.001003"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:15:10.521029" level="INFO">Clicking button 'Open order'.</msg>
-<arg>Open order</arg>
+<msg time="2024-04-30T12:07:28.800299" level="INFO">Clicking button 'id=neworderbtn'.</msg>
+<arg>id=neworderbtn</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-24T15:15:10.521029" elapsed="8.144543"/>
+<status status="PASS" start="2024-04-30T12:07:28.800299" elapsed="0.032931"/>
 </kw>
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
-<arg>3s</arg>
+<arg>5s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-04-24T15:15:18.665572" elapsed="2.005830"/>
+<status status="PASS" start="2024-04-30T12:07:28.833230" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-04-24T15:14:26.935054" elapsed="53.736348"/>
+<status status="PASS" start="2024-04-30T12:07:28.106693" elapsed="0.726537"/>
 </kw>
 <doc>Create new order</doc>
-<status status="PASS" start="2024-04-24T15:14:26.933340" elapsed="53.738062"/>
+<status status="PASS" start="2024-04-30T12:07:28.106693" elapsed="0.727540"/>
 </test>
-<test id="s1-t3" name=" 3-try to see all orders" line="27">
+<test id="s1-t3" name=" 3-try to see all orders" line="39">
 <kw name="See all orders">
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:15:22.697292" level="INFO">Current page contains element 'Xpath=//*[@id="header"]/nav/div/ul/li[1]'.</msg>
+<msg time="2024-04-30T12:07:28.842229" level="INFO">Current page contains element 'Xpath=//*[@id="header"]/nav/div/ul/li[1]'.</msg>
 <arg>Xpath=//*[@id="header"]/nav/div/ul/li[1]</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2024-04-24T15:15:20.671402" elapsed="2.025890"/>
+<status status="PASS" start="2024-04-30T12:07:28.835229" elapsed="0.007000"/>
 </kw>
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>5s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-04-24T15:15:22.697292" elapsed="2.005419"/>
+<status status="PASS" start="2024-04-30T12:07:28.842229" elapsed="0.001003"/>
 </kw>
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:15:24.704156" level="INFO">Clicking link 'Main'.</msg>
+<msg time="2024-04-30T12:07:28.843232" level="INFO">Clicking link 'Main'.</msg>
 <arg>Main</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-24T15:15:24.702711" elapsed="6.624197"/>
+<status status="PASS" start="2024-04-30T12:07:28.843232" elapsed="0.224049"/>
 </kw>
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>3s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-04-24T15:15:31.326908" elapsed="2.006356"/>
+<status status="PASS" start="2024-04-30T12:07:29.067281" elapsed="0.000988"/>
 </kw>
-<status status="PASS" start="2024-04-24T15:15:20.671402" elapsed="12.661862"/>
+<status status="PASS" start="2024-04-30T12:07:28.835229" elapsed="0.233040"/>
 </kw>
-<doc>see all orders</doc>
-<status status="PASS" start="2024-04-24T15:15:20.671402" elapsed="12.661862"/>
+<doc>see all orderss</doc>
+<status status="PASS" start="2024-04-30T12:07:28.835229" elapsed="0.233040"/>
 </test>
-<test id="s1-t4" name=" 4-try to view a specific order" line="30">
-<kw name="Visite a specific order and add comment">
-<kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:15:33.333264" level="INFO">Clicking link 'information'.</msg>
+<test id="s1-t4" name=" 4-try to view a specific order" line="42">
+<kw name="Visite a specific order and add comment" owner="orderpage">
+<kw name="Page Should Contain Link" owner="SeleniumLibrary">
+<msg time="2024-04-30T12:07:29.082269" level="INFO">Current page contains link 'information'.</msg>
+<msg time="2024-04-30T12:07:29.082269" level="INFO">${link_exists} = None</msg>
+<var>${link_exists}</var>
 <arg>information</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-24T15:15:33.333264" elapsed="6.725616"/>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<status status="PASS" start="2024-04-30T12:07:29.070269" elapsed="0.012000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${link_exists}' == 'PASS'</arg>
+<arg>Click Link</arg>
+<arg>information</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-30T12:07:29.082269" elapsed="0.000000"/>
 </kw>
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
-<arg>5s</arg>
+<arg>3s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-04-24T15:15:40.059879" elapsed="2.004231"/>
+<status status="PASS" start="2024-04-30T12:07:29.082269" elapsed="0.001003"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-04-30T12:07:29.083272" level="INFO">Clicking link 'information'.</msg>
+<arg>information</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-30T12:07:29.083272" elapsed="0.262595"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>3s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2024-04-30T12:07:29.345867" elapsed="0.000999"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:15:42.065171" level="INFO">Typing text 'now im going to close order after adding this comment' into text field 'id=inputTextarea'.</msg>
+<msg time="2024-04-30T12:07:29.346866" level="INFO">Typing text 'now im going to close order after adding this comment' into text field 'id=inputTextarea'.</msg>
 <arg>id=inputTextarea</arg>
 <arg>now im going to close order after adding this comment</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-24T15:15:42.064110" elapsed="6.174402"/>
-</kw>
-<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
-<arg>2s</arg>
-<doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-04-24T15:15:48.238512" elapsed="2.002650"/>
-</kw>
-<status status="PASS" start="2024-04-24T15:15:33.333264" elapsed="16.907898"/>
-</kw>
-<doc>see specific order</doc>
-<status status="PASS" start="2024-04-24T15:15:33.333264" elapsed="16.907898"/>
-</test>
-<test id="s1-t5" name=" 5-try to close order" line="33">
-<kw name="Close order">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:15:50.252646" level="INFO">Clicking button 'Close the order'.</msg>
-<arg>Close the order</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-24T15:15:50.251643" elapsed="6.646005"/>
-</kw>
-<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
-<arg>2s</arg>
-<doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-04-24T15:15:56.897648" elapsed="2.005756"/>
-</kw>
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:16:00.934079" level="INFO">Current page contains element 'Xpath=//*[@id="wrapper"]/section/div[1]/article/div/header/h2'.</msg>
-<arg>Xpath=//*[@id="wrapper"]/section/div[1]/article/div/header/h2</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2024-04-24T15:15:58.903404" elapsed="2.030675"/>
-</kw>
-<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
-<arg>2s</arg>
-<doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-04-24T15:16:00.934079" elapsed="2.004190"/>
-</kw>
-<status status="PASS" start="2024-04-24T15:15:50.251110" elapsed="12.687159"/>
-</kw>
-<doc>close order</doc>
-<status status="PASS" start="2024-04-24T15:15:50.241162" elapsed="12.697107"/>
-</test>
-<test id="s1-t6" name=" 6-try See customers and create new one" line="36">
-<kw name="See customers and create new one">
-<kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:16:02.938269" level="INFO">Clicking link 'Customers'.</msg>
-<arg>Customers</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-24T15:16:02.938269" elapsed="6.658065"/>
-</kw>
-<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
-<arg>2s</arg>
-<doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-04-24T15:16:09.596334" elapsed="2.005784"/>
-</kw>
-<kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:16:11.602118" level="INFO">Clicking link '162/'.</msg>
-<arg>162/</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-24T15:16:11.602118" elapsed="6.633892"/>
-</kw>
-<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
-<arg>2s</arg>
-<doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-04-24T15:16:18.236010" elapsed="2.005608"/>
-</kw>
-<kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:16:20.241618" level="INFO">Clicking link 'Customers'.</msg>
-<arg>Customers</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-24T15:16:20.241618" elapsed="6.602541"/>
-</kw>
-<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
-<arg>2s</arg>
-<doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-04-24T15:16:26.844159" elapsed="2.005801"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:16:28.849960" level="INFO">Clicking button 'Add'.</msg>
-<arg>Add</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-24T15:16:28.849960" elapsed="6.636922"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:16:35.487946" level="INFO">Typing text '658586' into text field 'id=card'.</msg>
-<arg>id=card</arg>
-<arg>658586</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-24T15:16:35.486882" elapsed="6.152775"/>
+<status status="PASS" start="2024-04-30T12:07:29.346866" elapsed="0.063546"/>
 </kw>
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>3s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-04-24T15:16:41.639657" elapsed="2.006425"/>
+<status status="PASS" start="2024-04-30T12:07:29.410412" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-30T12:07:29.411413" level="INFO">Clicking button '//*[@id="wrapper"]/section/div/article[1]/div[4]/section/form/div/input'.</msg>
+<arg>//*[@id="wrapper"]/section/div/article[1]/div[4]/section/form/div/input</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-30T12:07:29.411413" elapsed="0.230410"/>
+</kw>
+<status status="PASS" start="2024-04-30T12:07:29.069272" elapsed="0.572551"/>
+</kw>
+<doc>see specific order</doc>
+<status status="PASS" start="2024-04-30T12:07:29.069272" elapsed="0.573551"/>
+</test>
+<test id="s1-t5" name=" 5-try to close order" line="45">
+<kw name="Close order" owner="orderpage">
+<kw name="Page Should Contain Button" owner="SeleniumLibrary">
+<msg time="2024-04-30T12:07:29.654823" level="INFO">Current page contains input 'Close the order'.</msg>
+<msg time="2024-04-30T12:07:29.654823" level="INFO">${order_page_exists} = None</msg>
+<var>${order_page_exists}</var>
+<arg>Close the order</arg>
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<status status="PASS" start="2024-04-30T12:07:29.643823" elapsed="0.011000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${order_page_exists}' == 'PASS'</arg>
+<arg>Click Button</arg>
+<arg>Close the order</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-30T12:07:29.654823" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>3s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2024-04-30T12:07:29.654823" elapsed="0.001000"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-30T12:07:29.663823" level="INFO">Current page contains element 'Xpath=//*[@id="wrapper"]/section/div[1]/article/div/header/h2'.</msg>
+<arg>Xpath=//*[@id="wrapper"]/section/div[1]/article/div/header/h2</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-30T12:07:29.656822" elapsed="0.007001"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>3s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2024-04-30T12:07:29.663823" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2024-04-30T12:07:29.643823" elapsed="0.021000"/>
+</kw>
+<doc>close order</doc>
+<status status="PASS" start="2024-04-30T12:07:29.642823" elapsed="0.022000"/>
+</test>
+<test id="s1-t6" name=" 6-try See customers and create new one" line="48">
+<kw name="See customers and create new one" owner="customerspage">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-04-30T12:07:29.666823" level="INFO">Clicking link 'Customers'.</msg>
+<arg>Customers</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-30T12:07:29.666823" elapsed="0.239404"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-04-30T12:07:29.906227" level="INFO">Clicking link '162/'.</msg>
+<arg>162/</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-30T12:07:29.906227" elapsed="0.231458"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-04-30T12:07:30.138683" level="INFO">Clicking link 'Customers'.</msg>
+<arg>Customers</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-30T12:07:30.137685" elapsed="0.197184"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-30T12:07:30.334869" level="INFO">Clicking button 'Add'.</msg>
+<arg>Add</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-30T12:07:30.334869" elapsed="0.212351"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:16:43.646082" level="INFO">Typing text 'john' into text field 'Xpath=//*[@id="horizontal"]/form/div[2]/div/input'.</msg>
+<msg time="2024-04-30T12:07:30.547220" level="INFO">Typing text '5425' into text field 'id=card'.</msg>
+<arg>id=card</arg>
+<arg>5425</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-30T12:07:30.547220" elapsed="0.042174"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-30T12:07:30.590397" level="INFO">Typing text 'john' into text field 'Xpath=//*[@id="horizontal"]/form/div[2]/div/input'.</msg>
 <arg>Xpath=//*[@id="horizontal"]/form/div[2]/div/input</arg>
 <arg>john</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-24T15:16:43.646082" elapsed="6.114444"/>
-</kw>
-<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
-<arg>3s</arg>
-<doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-04-24T15:16:49.760526" elapsed="2.005740"/>
+<status status="PASS" start="2024-04-30T12:07:30.589394" elapsed="0.043827"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:16:51.766266" level="INFO">Typing text 'johndeo' into text field 'name=family'.</msg>
+<msg time="2024-04-30T12:07:30.633221" level="INFO">Typing text 'johndeo' into text field 'name=family'.</msg>
 <arg>name=family</arg>
 <arg>johndeo</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-24T15:16:51.766266" elapsed="6.163960"/>
-</kw>
-<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
-<arg>3s</arg>
-<doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-04-24T15:16:57.930226" elapsed="2.006055"/>
+<status status="PASS" start="2024-04-30T12:07:30.633221" elapsed="0.043027"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:16:59.936281" level="INFO">Typing text '+212655428974' into text field 'id=phoneid'.</msg>
+<msg time="2024-04-30T12:07:30.677252" level="INFO">Typing text '+212655428974' into text field 'id=phoneid'.</msg>
 <arg>id=phoneid</arg>
 <arg>+212655428974</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-24T15:16:59.936281" elapsed="6.170513"/>
-</kw>
-<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
-<arg>3s</arg>
-<doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-04-24T15:17:06.106794" elapsed="2.005361"/>
+<status status="PASS" start="2024-04-30T12:07:30.676248" elapsed="0.046000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:17:08.112155" level="INFO">Typing text 'johndeo@gmail.com' into text field 'id=mail2'.</msg>
+<msg time="2024-04-30T12:07:30.723248" level="INFO">Typing text 'johndeo@gmail.com' into text field 'id=mail2'.</msg>
 <arg>id=mail2</arg>
 <arg>johndeo@gmail.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-24T15:17:08.112155" elapsed="6.133796"/>
+<status status="PASS" start="2024-04-30T12:07:30.722248" elapsed="0.050104"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-24T15:17:24.246688" level="INFO">Slept 10 seconds.</msg>
-<arg>10</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-24T15:17:14.245951" elapsed="10.000737"/>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>name=Submit</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-04-30T12:07:30.772352" elapsed="0.015866"/>
+</kw>
+<msg time="2024-04-30T12:07:30.788218" level="INFO">${button_enabled} = True</msg>
+<var>${button_enabled}</var>
+<arg>Element Should Be Enabled</arg>
+<arg>name=Submit</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-04-30T12:07:30.772352" elapsed="0.015866"/>
 </kw>
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
-<arg>5s</arg>
+<arg>3s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-04-24T15:17:24.246688" elapsed="2.006545"/>
+<status status="PASS" start="2024-04-30T12:07:30.788218" elapsed="0.001000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>not ${button_enabled}</arg>
+<arg>Enable Buttonn</arg>
+<arg>${savebtn}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-30T12:07:30.789218" elapsed="0.000000"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:17:26.253233" level="INFO">Clicking button 'Save'.</msg>
-<msg time="2024-04-24T15:17:35.525565" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-86.png"&gt;&lt;img src="selenium-screenshot-86.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-04-24T15:17:35.525565" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="submit" class="btn btn-primary" style="width:170px" name="Submit" disabled=""&gt;...&lt;/button&gt; is not clickable at point (401, 537). Other element would receive the click: &lt;div class="col-sm-6"&gt;...&lt;/div&gt;
-  (Session info: chrome=124.0.6367.61)
-Stacktrace:
-	GetHandleVerifier [0x00007FF6E6D67032+63090]
-	(No symbol) [0x00007FF6E6CD2C82]
-	(No symbol) [0x00007FF6E6B6EC65]
-	(No symbol) [0x00007FF6E6BBBB34]
-	(No symbol) [0x00007FF6E6BB9954]
-	(No symbol) [0x00007FF6E6BB7164]
-	(No symbol) [0x00007FF6E6BB5EF9]
-	(No symbol) [0x00007FF6E6BAA708]
-	(No symbol) [0x00007FF6E6BD6FDA]
-	(No symbol) [0x00007FF6E6BAA00A]
-	(No symbol) [0x00007FF6E6BD71F0]
-	(No symbol) [0x00007FF6E6BF3412]
-	(No symbol) [0x00007FF6E6BD6D83]
-	(No symbol) [0x00007FF6E6BA83A8]
-	(No symbol) [0x00007FF6E6BA9441]
-	GetHandleVerifier [0x00007FF6E71625AD+4238317]
-	GetHandleVerifier [0x00007FF6E719F70D+4488525]
-	GetHandleVerifier [0x00007FF6E71979EF+4456495]
-	GetHandleVerifier [0x00007FF6E6E40576+953270]
-	(No symbol) [0x00007FF6E6CDE54F]
-	(No symbol) [0x00007FF6E6CD9224]
-	(No symbol) [0x00007FF6E6CD935B]
-	(No symbol) [0x00007FF6E6CC9B94]
-	(No symbol) [0x00007FFD578A7034]
-	RtlUserThreadStart [0x00007FFD59302651+33]
-</msg>
+<msg time="2024-04-30T12:07:30.789218" level="INFO">Clicking button 'Save'.</msg>
 <arg>Save</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="FAIL" start="2024-04-24T15:17:26.253233" elapsed="9.278329">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="submit" class="btn btn-primary" style="width:170px" name="Submit" disabled=""&gt;...&lt;/button&gt; is not clickable at point (401, 537). Other element would receive the click: &lt;div class="col-sm-6"&gt;...&lt;/div&gt;
-  (Session info: chrome=124.0.6367.61)
-Stacktrace:
-	GetHandleVerifier [0x00007FF6E6D67032+63090]
-	(No symbol) [0x00007FF6E6CD2C82]
-	(No symbol) [0x00007FF6E6B6EC65]
-	(No symbol) [0x00007FF6E6BBBB34]
-	(No symbol) [0x00007FF6E6BB9954]
-	(No symbol) [0x00007FF6E6BB7164]
-	(No symbol) [0x00007FF6E6BB5EF9]
-	(No symbol) [0x00007FF6E6BAA708]
-	(No symbol) [0x00007FF6E6BD6FDA]
-	(No symbol) [0x00007FF6E6BAA00A]
-	(No symbol) [0x00007FF6E6BD71F0]
-	(No symbol) [0x00007FF6E6BF3412]
-	(No symbol) [0x00007FF6E6BD6D83]
-	(No symbol) [0x00007FF6E6BA83A8]
-	(No symbol) [0x00007FF6E6BA9441]
-	GetHandleVerifier [0x00007FF6E71625AD+4238317]
-	GetHandleVerifier [0x00007FF6E719F70D+4488525]
-	GetHandleVerifier [0x00007FF6E71979EF+4456495]
-	GetHandleVerifier [0x00007FF6E6E40576+953270]
-	(No symbol) [0x00007FF6E6CDE54F]
-	(No symbol) [0x00007FF6E6CD9224]
-	(No symbol) [0x00007FF6E6CD935B]
-	(No symbol) [0x00007FF6E6CC9B94]
-	(No symbol) [0x00007FFD578A7034]
-	RtlUserThreadStart [0x00007FFD59302651+33]
-</status>
+<status status="PASS" start="2024-04-30T12:07:30.789218" elapsed="2.882814"/>
 </kw>
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>3s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="NOT RUN" start="2024-04-24T15:17:35.532563" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-30T12:07:33.672032" elapsed="0.000998"/>
 </kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<arg>Customer successfully added!</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="NOT RUN" start="2024-04-24T15:17:35.532563" elapsed="0.000000"/>
-</kw>
-<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
-<arg>3s</arg>
-<doc>Sets the timeout that is used by various keywords.</doc>
-<status status="NOT RUN" start="2024-04-24T15:17:35.532563" elapsed="0.000000"/>
-</kw>
-<status status="FAIL" start="2024-04-24T15:16:02.938269" elapsed="92.594294">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="submit" class="btn btn-primary" style="width:170px" name="Submit" disabled=""&gt;...&lt;/button&gt; is not clickable at point (401, 537). Other element would receive the click: &lt;div class="col-sm-6"&gt;...&lt;/div&gt;
-  (Session info: chrome=124.0.6367.61)
-Stacktrace:
-	GetHandleVerifier [0x00007FF6E6D67032+63090]
-	(No symbol) [0x00007FF6E6CD2C82]
-	(No symbol) [0x00007FF6E6B6EC65]
-	(No symbol) [0x00007FF6E6BBBB34]
-	(No symbol) [0x00007FF6E6BB9954]
-	(No symbol) [0x00007FF6E6BB7164]
-	(No symbol) [0x00007FF6E6BB5EF9]
-	(No symbol) [0x00007FF6E6BAA708]
-	(No symbol) [0x00007FF6E6BD6FDA]
-	(No symbol) [0x00007FF6E6BAA00A]
-	(No symbol) [0x00007FF6E6BD71F0]
-	(No symbol) [0x00007FF6E6BF3412]
-	(No symbol) [0x00007FF6E6BD6D83]
-	(No symbol) [0x00007FF6E6BA83A8]
-	(No symbol) [0x00007FF6E6BA9441]
-	GetHandleVerifier [0x00007FF6E71625AD+4238317]
-	GetHandleVerifier [0x00007FF6E719F70D+4488525]
-	GetHandleVerifier [0x00007FF6E71979EF+4456495]
-	GetHandleVerifier [0x00007FF6E6E40576+953270]
-	(No symbol) [0x00007FF6E6CDE54F]
-	(No symbol) [0x00007FF6E6CD9224]
-	(No symbol) [0x00007FF6E6CD935B]
-	(No symbol) [0x00007FF6E6CC9B94]
-	(No symbol) [0x00007FFD578A7034]
-	RtlUserThreadStart [0x00007FFD59302651+33]
-</status>
+<status status="PASS" start="2024-04-30T12:07:29.666823" elapsed="4.006207"/>
 </kw>
 <doc>See customers and create new one</doc>
-<status status="FAIL" start="2024-04-24T15:16:02.938269" elapsed="92.595197">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="submit" class="btn btn-primary" style="width:170px" name="Submit" disabled=""&gt;...&lt;/button&gt; is not clickable at point (401, 537). Other element would receive the click: &lt;div class="col-sm-6"&gt;...&lt;/div&gt;
-  (Session info: chrome=124.0.6367.61)
-Stacktrace:
-	GetHandleVerifier [0x00007FF6E6D67032+63090]
-	(No symbol) [0x00007FF6E6CD2C82]
-	(No symbol) [0x00007FF6E6B6EC65]
-	(No symbol) [0x00007FF6E6BBBB34]
-	(No symbol) [0x00007FF6E6BB9954]
-	(No symbol) [0x00007FF6E6BB7164]
-	(No symbol) [0x00007FF6E6BB5EF9]
-	(No symbol) [0x00007FF6E6BAA708]
-	(No symbol) [0x00007FF6E6BD6FDA]
-	(No symbol) [0x00007FF6E6BAA00A]
-	(No symbol) [0x00007FF6E6BD71F0]
-	(No symbol) [0x00007FF6E6BF3412]
-	(No symbol) [0x00007FF6E6BD6D83]
-	(No symbol) [0x00007FF6E6BA83A8]
-	(No symbol) [0x00007FF6E6BA9441]
-	GetHandleVerifier [0x00007FF6E71625AD+4238317]
-	GetHandleVerifier [0x00007FF6E719F70D+4488525]
-	GetHandleVerifier [0x00007FF6E71979EF+4456495]
-	GetHandleVerifier [0x00007FF6E6E40576+953270]
-	(No symbol) [0x00007FF6E6CDE54F]
-	(No symbol) [0x00007FF6E6CD9224]
-	(No symbol) [0x00007FF6E6CD935B]
-	(No symbol) [0x00007FF6E6CC9B94]
-	(No symbol) [0x00007FFD578A7034]
-	RtlUserThreadStart [0x00007FFD59302651+33]
-</status>
+<status status="PASS" start="2024-04-30T12:07:29.666823" elapsed="4.007208"/>
 </test>
-<test id="s1-t7" name=" 7-try to log out" line="39">
+<test id="s1-t7" name=" 7-try to log out" line="51">
 <kw name="Log out">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-04-24T15:17:35.538881" level="INFO">Clicking link 'Logout'.</msg>
+<msg time="2024-04-30T12:07:33.675031" level="INFO">Clicking link 'Logout'.</msg>
 <arg>Logout</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-24T15:17:35.537882" elapsed="6.631002"/>
+<status status="PASS" start="2024-04-30T12:07:33.675031" elapsed="0.222137"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-04-24T15:17:42.168884" elapsed="4.144670"/>
+<status status="PASS" start="2024-04-30T12:07:33.897168" elapsed="6.220665"/>
 </kw>
-<status status="PASS" start="2024-04-24T15:17:35.537882" elapsed="10.775672"/>
+<status status="PASS" start="2024-04-30T12:07:33.675031" elapsed="6.442802"/>
 </kw>
 <doc>logout</doc>
-<status status="PASS" start="2024-04-24T15:17:35.537882" elapsed="10.775672"/>
+<status status="PASS" start="2024-04-30T12:07:33.674031" elapsed="6.446759"/>
 </test>
-<status status="FAIL" start="2024-04-24T15:08:46.463835" elapsed="539.849719"/>
+<status status="PASS" start="2024-04-30T12:06:49.560687" elapsed="50.565254"/>
 </suite>
 <statistics>
 <total>
-<stat pass="6" fail="1" skip="0">All Tests</stat>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">1007</stat>
+<stat pass="1" fail="0" skip="0">Login</stat>
+<stat pass="1" fail="0" skip="0">Smoke</stat>
 </tag>
 <suite>
-<stat pass="6" fail="1" skip="0" id="s1" name="Hello">Hello</stat>
+<stat pass="7" fail="0" skip="0" id="s1" name="Hello">Hello</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-04-24T15:13:47.001365" level="WARN">Exception managing chrome: error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): operation timed out</msg>
-<msg time="2024-04-24T15:13:47.001365" level="WARN">The chromedriver version (123.0.6312.122) detected in PATH at C:\Users\aziani\Desktop\abc\chromedriver.exe might not be compatible with the detected chrome version (124.0.6367.61); currently, chromedriver  is recommended for chrome 124.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-04-30T12:07:09.393853" level="WARN">Exception managing chrome: error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: Une connexion existante a dû être fermée par l’hôte distant. (os error 10054)</msg>
+<msg time="2024-04-30T12:07:09.397856" level="WARN">The chromedriver version (123.0.6312.122) detected in PATH at C:\Users\aziani\Desktop\abc\chromedriver.exe might not be compatible with the detected chrome version (124.0.6367.63); currently, chromedriver  is recommended for chrome 124.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
