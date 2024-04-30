@@ -23,7 +23,7 @@ See customers and create new one
     Set Selenium Timeout         3s  
     Run Keyword If    not ${button_enabled}    Enable Buttonn   ${savebtn}
     Click Button       Save
-    # Page Should Contain   Customer successfully added!
+    Page Should Contain   Customer successfully added!
     Set Selenium Timeout         3s  
 
 
