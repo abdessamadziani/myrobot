@@ -14,7 +14,7 @@ See customers and create new one
     Click Link   162/
     Click Link      Customers
     Click Button    Add
-    Input Text    id=card        5425
+    Input Text    id=card        54254544
     Input Text    Xpath=//*[@id="horizontal"]/form/div[2]/div/input    john 
     Input Text    name=family    johndeo
     Input Text    id=phoneid    +212655428974

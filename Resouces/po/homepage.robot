@@ -2,9 +2,13 @@
 
 Library    SeleniumLibrary
 Resource    ../Common.robot
+Library    ../../Libraries/MyCustomeLibrary.py
 *** Variables ***
 ${neworderbtn}        neworderbtn
 *** Keywords ***
+Do Some Custom Thing
+#trying to customize my own library
+    do something special
 Create new order
     Click Link    id=neworder
     Set Selenium Timeout         3s  
