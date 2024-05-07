@@ -1,72 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-02T12:58:21.021785" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-03T17:41:22.267981" rpa="false" schemaversion="5">
 <suite id="s1" name="Hello" source="C:\Users\aziani\Desktop\abc\Tests\Hello.robot">
 <kw name="Begin Web Test" owner="Common" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-05-02T12:58:21.130162" level="INFO">Opening browser 'Chrome' to base url 'https://demo.playground-crm.com/'.</msg>
-<msg time="2024-05-02T12:58:40.929557" level="WARN">Exception managing chrome: error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: Une connexion existante a dû être fermée par l’hôte distant. (os error 10054)</msg>
-<msg time="2024-05-02T12:58:40.930558" level="WARN">The chromedriver version (123.0.6312.122) detected in PATH at C:\Users\aziani\Desktop\abc\chromedriver.exe might not be compatible with the detected chrome version (124.0.6367.63); currently, chromedriver  is recommended for chrome 124.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-05-03T17:41:22.415986" level="INFO">Opening browser 'Chrome' to base url 'https://demo.playground-crm.com/'.</msg>
+<msg time="2024-05-03T17:41:42.298382" level="WARN">Exception managing chrome: error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: Une connexion existante a dû être fermée par l’hôte distant. (os error 10054)</msg>
+<msg time="2024-05-03T17:41:42.299383" level="WARN">The chromedriver version (123.0.6312.122) detected in PATH at C:\Users\aziani\Desktop\abc\chromedriver.exe might not be compatible with the detected chrome version (124.0.6367.63); currently, chromedriver  is recommended for chrome 124.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>${URL}</arg>
 <arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-05-02T12:58:21.130162" elapsed="23.086542"/>
+<status status="PASS" start="2024-05-03T17:41:22.415986" elapsed="31.660323"/>
 </kw>
-<status status="PASS" start="2024-05-02T12:58:21.130162" elapsed="23.086542"/>
+<kw name="Set Log Level" owner="BuiltIn">
+<msg time="2024-05-03T17:41:54.077309" level="DEBUG">Log level changed from INFO to DEBUG.</msg>
+<arg>debug</arg>
+<doc>Sets the log threshold to the specified level.</doc>
+<status status="PASS" start="2024-05-03T17:41:54.076309" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2024-05-03T17:41:22.414986" elapsed="31.662323"/>
 </kw>
 <test id="s1-t1" name=" 1-Open Sign in Page and login" line="28">
 <kw name="Add signin data and submit" owner="signin">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-02T12:58:44.218704" level="INFO">Typing text 'admin' into text field 'id=user'.</msg>
+<msg time="2024-05-03T17:41:54.080309" level="INFO">Typing text 'admin' into text field 'id=user'.</msg>
+<msg time="2024-05-03T17:41:54.080309" level="DEBUG">POST http://localhost:52112/session/abc2c21afc1d9d6ec426b147112343fd/elements {'using': 'css selector', 'value': '[id="user"]'}</msg>
+<msg time="2024-05-03T17:41:54.094309" level="DEBUG">http://localhost:52112 "POST /session/abc2c21afc1d9d6ec426b147112343fd/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-05-03T17:41:54.094309" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.1124FEC66B02C030B3C0C500255E027A.d.65487E74871CB948C17759AE58F58034.e.3"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-05-03T17:41:54.094309" level="DEBUG">Finished Request</msg>
+<msg time="2024-05-03T17:41:54.094309" level="DEBUG">POST http://localhost:52112/session/abc2c21afc1d9d6ec426b147112343fd/element/f.1124FEC66B02C030B3C0C500255E027A.d.65487E74871CB948C17759AE58F58034.e.3/clear {}</msg>
+<msg time="2024-05-03T17:41:54.123312" level="DEBUG">http://localhost:52112 "POST /session/abc2c21afc1d9d6ec426b147112343fd/element/f.1124FEC66B02C030B3C0C500255E027A.d.65487E74871CB948C17759AE58F58034.e.3/clear HTTP/1.1" 200 0</msg>
+<msg time="2024-05-03T17:41:54.123312" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-05-03T17:41:54.123312" level="DEBUG">Finished Request</msg>
+<msg time="2024-05-03T17:41:54.123312" level="DEBUG">POST http://localhost:52112/session/abc2c21afc1d9d6ec426b147112343fd/element/f.1124FEC66B02C030B3C0C500255E027A.d.65487E74871CB948C17759AE58F58034.e.3/value {'text': 'admin', 'value': ['a', 'd', 'm', 'i', 'n']}</msg>
+<msg time="2024-05-03T17:41:54.164310" level="DEBUG">http://localhost:52112 "POST /session/abc2c21afc1d9d6ec426b147112343fd/element/f.1124FEC66B02C030B3C0C500255E027A.d.65487E74871CB948C17759AE58F58034.e.3/value HTTP/1.1" 200 0</msg>
+<msg time="2024-05-03T17:41:54.164310" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-05-03T17:41:54.164310" level="DEBUG">Finished Request</msg>
 <arg>${INPUT_LOGIN}</arg>
 <arg>${INPUT_LOGIN_VALUE}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-02T12:58:44.218704" elapsed="0.071644"/>
-</kw>
-<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
-<arg>2s</arg>
-<doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-05-02T12:58:44.291348" elapsed="0.001000"/>
+<status status="PASS" start="2024-05-03T17:41:54.079309" elapsed="0.085001"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-05-02T12:58:44.292348" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg time="2024-05-02T12:58:44.309351" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2024-05-03T17:41:54.165313" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2024-05-03T17:41:54.165313" level="DEBUG">POST http://localhost:52112/session/abc2c21afc1d9d6ec426b147112343fd/elements {'using': 'css selector', 'value': '[id="password"]'}</msg>
+<msg time="2024-05-03T17:41:54.174310" level="DEBUG">http://localhost:52112 "POST /session/abc2c21afc1d9d6ec426b147112343fd/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-05-03T17:41:54.174310" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.1124FEC66B02C030B3C0C500255E027A.d.65487E74871CB948C17759AE58F58034.e.4"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-05-03T17:41:54.175309" level="DEBUG">Finished Request</msg>
+<msg time="2024-05-03T17:41:54.175309" level="DEBUG">POST http://localhost:52112/session/abc2c21afc1d9d6ec426b147112343fd/element/f.1124FEC66B02C030B3C0C500255E027A.d.65487E74871CB948C17759AE58F58034.e.4/clear {}</msg>
+<msg time="2024-05-03T17:41:54.194312" level="DEBUG">http://localhost:52112 "POST /session/abc2c21afc1d9d6ec426b147112343fd/element/f.1124FEC66B02C030B3C0C500255E027A.d.65487E74871CB948C17759AE58F58034.e.4/clear HTTP/1.1" 200 0</msg>
+<msg time="2024-05-03T17:41:54.195313" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-05-03T17:41:54.195313" level="DEBUG">Finished Request</msg>
+<msg time="2024-05-03T17:41:54.195313" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2024-05-03T17:41:54.226310" level="DEBUG">Log level changed from NONE to DEBUG.</msg>
 <arg>${INPUT_PASSWORD}</arg>
 <arg>${INPUT_PASSWORD_VALUE}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-02T12:58:44.292348" elapsed="0.041003"/>
+<status status="PASS" start="2024-05-03T17:41:54.165313" elapsed="0.060997"/>
 </kw>
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<msg time="2024-05-03T17:41:54.226310" level="DEBUG">POST http://localhost:52112/session/abc2c21afc1d9d6ec426b147112343fd/timeouts {'script': 2000}</msg>
+<msg time="2024-05-03T17:41:54.227311" level="DEBUG">http://localhost:52112 "POST /session/abc2c21afc1d9d6ec426b147112343fd/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2024-05-03T17:41:54.227311" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-05-03T17:41:54.227311" level="DEBUG">Finished Request</msg>
 <arg>2s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-05-02T12:58:44.333351" elapsed="0.001000"/>
+<status status="PASS" start="2024-05-03T17:41:54.226310" elapsed="0.001001"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-05-02T12:58:44.334351" level="INFO">Clicking button 'Login!'.</msg>
+<msg time="2024-05-03T17:41:54.227311" level="INFO">Clicking button 'Login!'.</msg>
+<msg time="2024-05-03T17:41:54.227311" level="DEBUG">GET http://localhost:52112/session/abc2c21afc1d9d6ec426b147112343fd/url {}</msg>
+<msg time="2024-05-03T17:41:54.231312" level="DEBUG">http://localhost:52112 "GET /session/abc2c21afc1d9d6ec426b147112343fd/url HTTP/1.1" 200 0</msg>
+<msg time="2024-05-03T17:41:54.231312" level="DEBUG">Remote response: status=200 | data={"value":"https://demo.playground-crm.com/"} | headers=HTTPHeaderDict({'Content-Length': '44', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-05-03T17:41:54.232310" level="DEBUG">Finished Request</msg>
+<msg time="2024-05-03T17:41:54.232310" level="DEBUG">POST http://localhost:52112/session/abc2c21afc1d9d6ec426b147112343fd/elements {'using': 'xpath', 'value': "//input[(@id='Login!' or @name='Login!' or @value='Login!' or @src='Login!' or @src='https://demo.pl..."}</msg>
+<msg time="2024-05-03T17:41:54.243310" level="DEBUG">http://localhost:52112 "POST /session/abc2c21afc1d9d6ec426b147112343fd/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-05-03T17:41:54.244310" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-05-03T17:41:54.244310" level="DEBUG">Finished Request</msg>
+<msg time="2024-05-03T17:41:54.244310" level="DEBUG">POST http://localhost:52112/session/abc2c21afc1d9d6ec426b147112343fd/elements {'using': 'xpath', 'value': "//button[(@id='Login!' or @name='Login!' or @value='Login!' or normalize-space(descendant-or-self::t..."}</msg>
+<msg time="2024-05-03T17:41:54.251310" level="DEBUG">http://localhost:52112 "POST /session/abc2c21afc1d9d6ec426b147112343fd/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-05-03T17:41:54.251310" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.1124FEC66B02C030B3C0C500255E027A.d.65487E74871CB948C17759AE58F58034.e.5"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-05-03T17:41:54.251310" level="DEBUG">Finished Request</msg>
+<msg time="2024-05-03T17:41:54.251310" level="DEBUG">POST http://localhost:52112/session/abc2c21afc1d9d6ec426b147112343fd/element/f.1124FEC66B02C030B3C0C500255E027A.d.65487E74871CB948C17759AE58F58034.e.5/click {}</msg>
+<msg time="2024-05-03T17:41:56.387108" level="DEBUG">http://localhost:52112 "POST /session/abc2c21afc1d9d6ec426b147112343fd/element/f.1124FEC66B02C030B3C0C500255E027A.d.65487E74871CB948C17759AE58F58034.e.5/click HTTP/1.1" 200 0</msg>
+<msg time="2024-05-03T17:41:56.388106" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-05-03T17:41:56.388106" level="DEBUG">Finished Request</msg>
 <arg>${BUTTON_LOGIN}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-02T12:58:44.334351" elapsed="1.873773"/>
+<status status="PASS" start="2024-05-03T17:41:54.227311" elapsed="2.160795"/>
 </kw>
-<kw name="Set Log Level" owner="BuiltIn">
-<arg>info</arg>
-<doc>Sets the log threshold to the specified level.</doc>
-<status status="PASS" start="2024-05-02T12:58:46.208124" elapsed="0.001001"/>
-</kw>
-<status status="PASS" start="2024-05-02T12:58:44.217705" elapsed="1.991420"/>
+<status status="PASS" start="2024-05-03T17:41:54.079309" elapsed="2.308797"/>
 </kw>
 <doc>Open Signin Page and login</doc>
 <tag>1007</tag>
 <tag>Login</tag>
 <tag>Smoke</tag>
-<status status="PASS" start="2024-05-02T12:58:44.216704" elapsed="1.992421"/>
+<status status="PASS" start="2024-05-03T17:41:54.078309" elapsed="2.310797"/>
 </test>
 <kw name="End Web Test" owner="Common" type="TEARDOWN">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
+<msg time="2024-05-03T17:41:56.391108" level="DEBUG">Closing all browsers.</msg>
+<msg time="2024-05-03T17:41:56.391108" level="DEBUG">DELETE http://localhost:52112/session/abc2c21afc1d9d6ec426b147112343fd {}</msg>
+<msg time="2024-05-03T17:41:56.445106" level="DEBUG">http://localhost:52112 "DELETE /session/abc2c21afc1d9d6ec426b147112343fd HTTP/1.1" 200 0</msg>
+<msg time="2024-05-03T17:41:56.445106" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-05-03T17:41:56.445106" level="DEBUG">Finished Request</msg>
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-05-02T12:58:46.211131" elapsed="6.192492"/>
+<status status="PASS" start="2024-05-03T17:41:56.391108" elapsed="6.154884"/>
 </kw>
-<status status="PASS" start="2024-05-02T12:58:46.211131" elapsed="6.192492"/>
+<status status="PASS" start="2024-05-03T17:41:56.390107" elapsed="6.155885"/>
 </kw>
-<status status="PASS" start="2024-05-02T12:58:21.022785" elapsed="31.380838"/>
+<status status="PASS" start="2024-05-03T17:41:22.269982" elapsed="40.276010"/>
 </suite>
 <statistics>
 <total>
@@ -82,7 +124,7 @@
 </suite>
 </statistics>
 <errors>
-<msg time="2024-05-02T12:58:40.929557" level="WARN">Exception managing chrome: error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: Une connexion existante a dû être fermée par l’hôte distant. (os error 10054)</msg>
-<msg time="2024-05-02T12:58:40.930558" level="WARN">The chromedriver version (123.0.6312.122) detected in PATH at C:\Users\aziani\Desktop\abc\chromedriver.exe might not be compatible with the detected chrome version (124.0.6367.63); currently, chromedriver  is recommended for chrome 124.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-05-03T17:41:42.298382" level="WARN">Exception managing chrome: error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: Une connexion existante a dû être fermée par l’hôte distant. (os error 10054)</msg>
+<msg time="2024-05-03T17:41:42.299383" level="WARN">The chromedriver version (123.0.6312.122) detected in PATH at C:\Users\aziani\Desktop\abc\chromedriver.exe might not be compatible with the detected chrome version (124.0.6367.63); currently, chromedriver  is recommended for chrome 124.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>

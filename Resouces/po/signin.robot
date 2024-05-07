@@ -18,9 +18,9 @@ ${BUTTON_LOGIN}       Login!
 #     Open Browser     ${url}    ${Browser}
 #     Set Selenium Timeout         2s  
 Add signin data and submit 
+
     Input Text    ${INPUT_LOGIN}    ${INPUT_LOGIN_VALUE}
-    Set Selenium Timeout         2s  
+    # Set Selenium Timeout         2s  
     Input Password     ${INPUT_PASSWORD}    ${INPUT_PASSWORD_VALUE}
     Set Selenium Timeout         2s  
     Click Button    ${BUTTON_LOGIN}
-    Set Log Level    debug
